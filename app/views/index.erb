@@ -1,0 +1,14 @@
+<h1>Bienvenido a Sinatra!</h1>
+
+<h2>Inicia Sesión</h2>
+<form action="/login" method="post">
+  <input type="text" name="email" placeholder="email"><br>
+  <input type="password" name="password" placeholder="password"><br>  
+  <input type="submit">
+</form>
+<a href="/registration">Regístrate</a>
+
+<% unless session[:user_id] %>
+<p>Favor de iniciar sesión para entrar a VIP</p>
+<% end %>
+
